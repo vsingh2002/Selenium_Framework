@@ -23,11 +23,12 @@ __How to Run__
 
 What the Script Does
 
-**•** Opens browser  
-**•** Navigates to registration page  
-**•** Enters details with random email  
-**•** Submits form 
-**•** Verifies "Your registration completed" message
+• Opens browser  
+• Navigates to registration page  
+• Enters details with random email  
+• Submits form  
+• Verifies "Your registration completed" message
+
 
 
 
