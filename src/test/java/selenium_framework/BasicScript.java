@@ -16,7 +16,7 @@ public class BasicScript {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://demowebshop.tricentis.com/");
 		String pageTitle = driver.getTitle();
-		System.out.println("Title of page is :" + pageTitle);
+		System.out.println("Title of page is : " + pageTitle);
 		driver.findElement(By.linkText("Register")).click();
 		driver.findElement(By.id("gender-male")).click();
 		driver.findElement(By.id("FirstName")).sendKeys("Praveen");
@@ -30,8 +30,11 @@ public class BasicScript {
 		driver.findElement(By.id("register-button")).click();
 		String actualText = driver.findElement(By.xpath("//div[contains(text(),'Your registration completed')]"))
 				.getText();
+		if (actualText.equals("Your registration completed")) {
+			System.out.println("Registration successfull");
+		}
 		Assert.assertEquals(actualText, "Your registration completed");
-		driver.close();
+		driver.quit();
 
 	}
 }
